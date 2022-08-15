@@ -1,4 +1,9 @@
 .tab {
+  .btnContainer {
+    width: 100%;
+
+    border-bottom: 1px solid #eeeeee;
+  }
   button {
     padding: 8px 16px;
     color: darkgrey;
@@ -7,7 +12,6 @@
     cursor: pointer;
     border: none;
     background-color: white;
-    border-bottom: 1px solid #eeeeee;
   }
   button:hover {
     color: #333333;

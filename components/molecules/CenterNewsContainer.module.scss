@@ -1,5 +1,20 @@
 .centerNewsContainer {
   width: 100%;
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .circle {
+      padding: 8px;
+      border-radius: 50%;
+      background: blue;
+    }
+    .header {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0px;
+    }
+  }
 
   .largeNews {
     position: relative;

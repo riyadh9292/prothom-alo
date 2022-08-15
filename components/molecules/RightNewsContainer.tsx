@@ -1,4 +1,6 @@
 import { FunctionComponent } from "react";
+import Label from "../atoms/label";
+import styles from "./RightNewsContainer.module.scss";
 
 interface RighrNewsContainerProps {
   news: any;
@@ -9,7 +11,11 @@ const RighrNewsContainer: FunctionComponent<RighrNewsContainerProps> = ({
 }) => {
   //   console.log(news);
 
-  return <div className="">right</div>;
+  return (
+    <div className={styles.rightNewsWrapper}>
+      <Label value={"বিজ্ঞাপন"} className={styles.header} />
+    </div>
+  );
 };
 
 export default RighrNewsContainer;

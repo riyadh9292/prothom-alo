@@ -19,7 +19,7 @@ const NewsTab: FunctionComponent<NewsTabProps> = ({ news }) => {
 
   return (
     <div className={styles.tab}>
-      <div>
+      <div className={styles.btnContainer}>
         <Button
           className={`${activeTab === "latest" ? styles.active : ""}`}
           onClick={() => setActiveTab("latest")}

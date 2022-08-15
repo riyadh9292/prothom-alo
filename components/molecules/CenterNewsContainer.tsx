@@ -10,10 +10,16 @@ interface CenterNewsContainerProps {
 const CenterNewsContainer: FunctionComponent<CenterNewsContainerProps> = ({
   news,
 }) => {
-  console.log("center", news.items[2]);
+  console.log("center", news);
 
   return (
     <div className={styles.centerNewsContainer}>
+      <div className={styles.headerWrapper}>
+        <span className={styles.circle}></span>
+
+        <Label value={news.name} className={styles.header} />
+      </div>
+
       <div className={styles.largeNews}>
         <Image src={news.items[2].thumb} className="image-class" />
         <div className={styles.largeNewsTitle}>
