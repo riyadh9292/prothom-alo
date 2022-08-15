@@ -1,5 +1,8 @@
 import { FunctionComponent } from "react";
+import CenterNewsContainer from "../../molecules/CenterNewsContainer";
 import NewsTab from "../../molecules/NewsTab";
+import RighrNewsContainer from "../../molecules/RightNewsContainer";
+import styles from "./MainFeatures.module.scss";
 
 interface MainFeaturesProps {
   posts: any;
@@ -12,8 +15,17 @@ const MainFeatures: FunctionComponent<MainFeaturesProps> = () => {
   console.log(posts);
 
   return (
-    <div className="">
-      <NewsTab news={posts} />
+    <div className={styles.mainFeatures}>
+      <aside>
+        <NewsTab news={posts} />
+      </aside>
+
+      <div className={styles.selected}>
+        <CenterNewsContainer news={posts["selected"]} />
+      </div>
+      <div className={styles.advertise}>
+        <RighrNewsContainer news={posts["selected"]} />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.centerNewsContainer {
+  width: 100%;
+
+  .largeNews {
+    position: relative;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    .largeNewsTitle {
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom: 10px;
+      font-size: 24px;
+      color: white;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+}
