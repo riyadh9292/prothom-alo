@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import Label from "../../../atoms/label";
+import NewsTitle from "../../../atoms/news-title";
 import styles from "./LeftNews.module.scss";
 
 interface LeftNewsCardProps {
@@ -13,7 +14,8 @@ const LeftNewsCard: FunctionComponent<LeftNewsCardProps> = ({ news }) => {
   return (
     <div className={styles.cardContainer}>
       <Label value={news.sort} className={styles.number} />
-      <div className={styles.headlineContainer}>
+      <NewsTitle headline={news.headline} subheadline={news.subheadline} />
+      {/* <div className={styles.headlineContainer}>
         <Label
           value={news.headline}
           className={styles.headline + news.subheadline && styles.red}
@@ -26,7 +28,7 @@ const LeftNewsCard: FunctionComponent<LeftNewsCardProps> = ({ news }) => {
             />
           </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

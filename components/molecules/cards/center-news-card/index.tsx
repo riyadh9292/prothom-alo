@@ -1,4 +1,6 @@
 import { FunctionComponent } from "react";
+import NewsTitle from "../../../atoms/news-title";
+import styles from "./CenterNewsCard.module.scss";
 
 interface CenterNewsCardProps {
   news: any;
@@ -10,7 +12,12 @@ const CenterNewsCard: FunctionComponent<CenterNewsCardProps> = ({ news }) => {
   return (
     <div className="">
       <img src={news.thumb} alt="" />
-      {news.headline}
+      <NewsTitle
+        headline={news.sort + " " + news.headline}
+        subheadline={news.subheadline}
+        labelClassName={styles.label}
+        subLabelclass={styles.bold}
+      />
     </div>
   );
 };

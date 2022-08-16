@@ -9,7 +9,7 @@ interface NewsTabProps {
 
 const NewsTab: FunctionComponent<NewsTabProps> = ({ news }) => {
   const [activeTab, setActiveTab] = useState<
-    "latest" | "mostread" | "selected"
+    "latest" | "mostread" | "discussed"
   >();
 
   useState(() => {
@@ -31,9 +31,9 @@ const NewsTab: FunctionComponent<NewsTabProps> = ({ news }) => {
           value={news?.mostread?.name}
         />
         <Button
-          className={`${activeTab === "selected" ? styles.active : ""}`}
-          onClick={() => setActiveTab("selected")}
-          value={news?.selected?.name}
+          className={`${activeTab === "discussed" ? styles.active : ""}`}
+          onClick={() => setActiveTab("discussed")}
+          value={news?.discussed?.name}
         />
         <div className=""></div>
       </div>
