@@ -23,9 +23,7 @@ const MainFeatures: FunctionComponent<MainFeaturesProps> = () => {
       <div className={styles.selected}>
         <CenterNewsContainer news={posts["selected"]} />
       </div>
-      <div className={styles.advertise}>
-        <RighrNewsContainer news={posts["selected"]} />
-      </div>
+      {/*  */}
     </div>
   );
 };

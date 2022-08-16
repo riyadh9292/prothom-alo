@@ -3,15 +3,25 @@
   grid-template-columns: repeat(4, 1fr);
   //   justify-items: center;
   gap: 10px;
+
   aside {
     grid-column: 1;
     padding-right: 10px;
     border-right: 1px solid #eeeeee;
   }
   .selected {
-    grid-column: 2/4;
+    grid-column: 2/5;
   }
-  .advertise {
-    grid-column: 4/5;
+  // .advertise {
+  //   grid-column: 4/5;
+  // }
+}
+@media (max-width: 768px) {
+  .mainFeatures {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .selected {
+    grid-column: 1 !important;
   }
 }

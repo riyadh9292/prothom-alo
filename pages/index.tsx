@@ -8,7 +8,7 @@ import MainFeatures from "../components/organisms/main-features";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = (posts) => {
-  console.log(posts);
+  // console.log(posts);
 
   return (
     // className={styles.container}

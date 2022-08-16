@@ -9,10 +9,11 @@ const LeftNewsContainer: FunctionComponent<LeftNewsContainerProps> = ({
   leftNews,
 }) => {
   //   console.log(leftNews?.items);
+  const sorted = leftNews.items.sort((a: any, b: any) => a.sort - b.sort);
 
   return (
     <div className="">
-      {leftNews?.items.map((news: any, key: number) => (
+      {sorted.map((news: any, key: number) => (
         <LeftNewsCard key={key} news={news} />
       ))}
     </div>

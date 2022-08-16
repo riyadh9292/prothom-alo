@@ -1,11 +1,11 @@
 @import "mixins";
 $color-primary: #ff4500;
-@include desktop() {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+// @include desktop() {
+//   .grid {
+//     width: 100%;
+//     flex-direction: column;
+//   }
+// }
 // .cardContainer {
 //   display: flex;
 //   .card {
