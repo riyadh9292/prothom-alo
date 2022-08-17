@@ -37,7 +37,7 @@ const CenterNewsContainer: FunctionComponent<CenterNewsContainerProps> = ({
               }
               className=""
             >
-              <Image src={sorted[0].thumb} className="image-class" />
+              <Image src={sorted[0].thumb} className={styles.thumb} />
               <div className={styles.largeNewsTitle}>
                 <div className="">
                   <NewsTitle
@@ -65,6 +65,7 @@ const CenterNewsContainer: FunctionComponent<CenterNewsContainerProps> = ({
                   }
                   news={n}
                   key={key}
+                  position={key}
                 />
               ))}
             </div>
@@ -76,7 +77,10 @@ const CenterNewsContainer: FunctionComponent<CenterNewsContainerProps> = ({
           <div className={styles.adOne}>
             <span>AD-1</span>
           </div>
-          <RightNewsContainer news={sorted.slice(3)} />
+
+          <div className={styles.rightNewsContainer}>
+            <RightNewsContainer news={sorted.slice(3)} />
+          </div>
         </div>
       </div>
     </div>

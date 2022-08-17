@@ -24,14 +24,17 @@ const NewsDetails: FunctionComponent<NewsDetailsProps> = () => {
     getSingleNews(id, type);
   }, [id, type]);
 
-  // console.log(singleNews?.descriptions);
-
   return (
     <div className={styles.descriptionWrapper}>
       <div className={styles.descriptionWrapper}>
         <Label value={singleNews?.subheadline} className={styles.gray} />
         <Label value={singleNews?.headline} className={styles.header} />
-        <img src={singleNews?.thumb} alt="" srcSet="" />
+        <img
+          src={singleNews?.thumb}
+          className={styles.thumb}
+          alt=""
+          srcSet=""
+        />
         <div
           className={styles?.descriptions}
           dangerouslySetInnerHTML={{ __html: singleNews?.descriptions }}

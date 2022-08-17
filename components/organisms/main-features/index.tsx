@@ -15,16 +15,24 @@ const MainFeatures: FunctionComponent<MainFeaturesProps> = () => {
   // console.log(posts);
 
   return (
-    <div className={styles.mainFeatures}>
-      <aside>
-        <NewsTab news={posts} />
-      </aside>
+    <>
+      <div className={styles.mainFeatures}>
+        <aside>
+          <NewsTab news={posts} />
+        </aside>
 
-      <div className={styles.selected}>
-        <CenterNewsContainer news={posts["selected"]} />
+        <div className={styles.selected}>
+          <CenterNewsContainer news={posts["selected"]} />
+        </div>
+
+        {/*  */}
       </div>
-      {/*  */}
-    </div>
+      <div className={styles.advertise2}>
+        <div className={styles.adOne}>
+          <span>AD-2</span>
+        </div>
+      </div>
+    </>
   );
 };
 

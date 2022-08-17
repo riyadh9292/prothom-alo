@@ -1,7 +1,16 @@
 .tab {
   .btnContainer {
     width: 100%;
+    display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: start;
     border-bottom: 1px solid #eeeeee;
+  }
+  @media (max-width: 769px) {
+    .btnContainer {
+      // display: flex;
+      justify-content: center;
+    }
   }
   button {
     padding: 8px 16px;

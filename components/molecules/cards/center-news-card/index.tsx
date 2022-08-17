@@ -5,16 +5,25 @@ import styles from "./CenterNewsCard.module.scss";
 interface CenterNewsCardProps {
   news: any;
   onClick: () => void;
+  position: number;
 }
 
 const CenterNewsCard: FunctionComponent<CenterNewsCardProps> = ({
   news,
   onClick,
+  position,
 }) => {
-  console.log(news.thumb);
+  // console.log(position);
 
   return (
-    <div onClick={onClick} className="">
+    <div
+      onClick={onClick}
+      className={`${
+        position === 0
+          ? styles.centerNewsCardWithRightLine
+          : styles.centerNewsCard
+      }`}
+    >
       <img src={news.thumb} alt="" />
       <NewsTitle
         headline={news.sort + " " + news.headline}

@@ -6,6 +6,8 @@
     gap: 10px;
     .selectedNews {
       width: 60%;
+      padding-right: 10px;
+      border-right: 1px solid #eeeeee;
     }
     .advertise {
       width: 40%;
@@ -18,7 +20,7 @@
         width: 100%;
       }
       .advertise {
-        width: 40%;
+        width: 100%;
       }
     }
   }
@@ -29,12 +31,12 @@
       margin: 0px;
     }
     .adOne {
-      width: 100%;
+      max-width: 100%;
       height: 300px;
       background: rgb(214, 211, 211);
       border: 1px solid #eeeeee;
       border-radius: 10px;
-      // margin-top: 30px;
+      margin-bottom: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,6 +44,27 @@
         font-size: 30px;
         color: blanchedalmond;
       }
+    }
+    .rightNewsContainer {
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid #eeeeee;
+    }
+  }
+  @media (max-width: 1023px) {
+    .yellow {
+      font-size: 16px;
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: 468px) {
+    .yellow {
+      font-size: 12px;
+      padding-left: 20px;
+    }
+    .advertise {
+      padding: 0px 10px;
+      width: fit-content;
     }
   }
 
@@ -62,14 +85,12 @@
   }
 
   .largeNews {
-    // position: relative;
+    cursor: pointer;
     width: 100%;
     img {
       width: 100%;
     }
     .largeNewsTitle {
-      // position: absolute;
-
       bottom: 10px;
       font-size: 24px;
       padding: 0px 20px;
@@ -83,9 +104,21 @@
     padding-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  }
+  @media (max-width: 1023px) {
+    .centerCards {
+      padding-top: 60px !important;
+    }
   }
 }
+@media (max-width: "468px") {
+  .largeNews {
+    .thumb {
+      width: fit-content;
+    }
+  }
+}
+
 .bold {
   font-weight: 700;
 }

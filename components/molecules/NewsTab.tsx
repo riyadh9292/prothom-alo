@@ -20,21 +20,24 @@ const NewsTab: FunctionComponent<NewsTabProps> = ({ news }) => {
   return (
     <div className={styles.tab}>
       <div className={styles.btnContainer}>
-        <Button
-          className={`${activeTab === "latest" ? styles.active : ""}`}
-          onClick={() => setActiveTab("latest")}
-          value={news?.latest?.name}
-        />
-        <Button
-          className={`${activeTab === "mostread" ? styles.active : ""}`}
-          onClick={() => setActiveTab("mostread")}
-          value={news?.mostread?.name}
-        />
-        <Button
-          className={`${activeTab === "discussed" ? styles.active : ""}`}
-          onClick={() => setActiveTab("discussed")}
-          value={news?.discussed?.name}
-        />
+        <div className="">
+          <Button
+            className={`${activeTab === "latest" ? styles.active : ""}`}
+            onClick={() => setActiveTab("latest")}
+            value={news?.latest?.name}
+          />
+          <Button
+            className={`${activeTab === "mostread" ? styles.active : ""}`}
+            onClick={() => setActiveTab("mostread")}
+            value={news?.mostread?.name}
+          />
+          <Button
+            className={`${activeTab === "discussed" ? styles.active : ""}`}
+            onClick={() => setActiveTab("discussed")}
+            value={news?.discussed?.name}
+          />
+        </div>
+
         <div className=""></div>
       </div>
       <div className="">
