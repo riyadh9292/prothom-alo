@@ -10,11 +10,12 @@ interface NewsTabProps {
 const NewsTab: FunctionComponent<NewsTabProps> = ({ news }) => {
   const [activeTab, setActiveTab] = useState<
     "latest" | "mostread" | "discussed"
-  >();
+  >("latest");
 
-  useState(() => {
-    setActiveTab("latest");
-  }, []);
+  // useEffect(() => {
+  //   setActiveTab("latest");
+  // }, []);
+
   // console.log("news", news["discussed"]);
 
   return (

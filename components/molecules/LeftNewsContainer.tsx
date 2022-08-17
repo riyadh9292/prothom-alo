@@ -12,11 +12,11 @@ const LeftNewsContainer: FunctionComponent<LeftNewsContainerProps> = ({
   activeTab,
 }) => {
   const router = useRouter();
-  const sorted = leftNews.items.sort((a: any, b: any) => a.sort - b.sort);
+  const sorted = leftNews?.items?.sort((a: any, b: any) => a.sort - b.sort);
 
   return (
     <div className="">
-      {sorted.map((news: any, key: number) => (
+      {sorted?.map((news: any, key: number) => (
         <LeftNewsCard
           onClick={() =>
             router.push({
