@@ -5,14 +5,17 @@ import styles from "./LeftNews.module.scss";
 
 interface LeftNewsCardProps {
   news: any;
+  onClick: () => void;
 }
 
-const LeftNewsCard: FunctionComponent<LeftNewsCardProps> = ({ news }) => {
-  console.log("left news", news);
+const LeftNewsCard: FunctionComponent<LeftNewsCardProps> = ({
+  news,
+  onClick,
+}) => {
   // const sorte
 
   return (
-    <div className={styles.cardContainer}>
+    <div onClick={onClick} className={styles.cardContainer}>
       <Label value={news.sort} className={styles.number} />
       <NewsTitle headline={news.headline} subheadline={news.subheadline} />
       {/* <div className={styles.headlineContainer}>

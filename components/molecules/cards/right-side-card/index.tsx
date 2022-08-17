@@ -5,11 +5,15 @@ import styles from "./RightSideCard.module.scss";
 import labelStyles from "../center-news-card/CenterNewsCard.module.scss";
 interface RightSideCardProps {
   news: any;
+  onClick: () => void;
 }
 
-const RightSideCard: FunctionComponent<RightSideCardProps> = ({ news }) => {
+const RightSideCard: FunctionComponent<RightSideCardProps> = ({
+  news,
+  onClick,
+}) => {
   return (
-    <div className={styles.rightCardContainer}>
+    <div onClick={onClick} className={styles.rightCardContainer}>
       <div className={styles.imageWrapper}>
         <NewsTitle
           headline={news.sort + " " + news.headline}

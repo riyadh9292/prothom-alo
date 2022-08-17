@@ -12,7 +12,7 @@ const MainFeatures: FunctionComponent<MainFeaturesProps> = () => {
   // console.log(posts);
   //   const { posts: allNews } = posts;
   const posts = require(`../../../pages/sample-datar5.json`);
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <div className={styles.mainFeatures}>

@@ -38,7 +38,10 @@ const NewsTab: FunctionComponent<NewsTabProps> = ({ news }) => {
         <div className=""></div>
       </div>
       <div className="">
-        <LeftNewsContainer leftNews={news[`${activeTab}`]} />
+        <LeftNewsContainer
+          activeTab={activeTab}
+          leftNews={news[`${activeTab}`]}
+        />
       </div>
     </div>
   );

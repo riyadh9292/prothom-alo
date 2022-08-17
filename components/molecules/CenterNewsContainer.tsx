@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { FunctionComponent } from "react";
 import Image from "../atoms/image";
 import Label from "../atoms/label";
@@ -13,7 +14,7 @@ interface CenterNewsContainerProps {
 const CenterNewsContainer: FunctionComponent<CenterNewsContainerProps> = ({
   news,
 }) => {
-  // console.log("center", news);
+  const router = useRouter();
   const sorted = news.items.sort((a: any, b: any) => a.sort - b.sort);
 
   return (
@@ -27,26 +28,44 @@ const CenterNewsContainer: FunctionComponent<CenterNewsContainerProps> = ({
           </div>
 
           <div className={styles.largeNews}>
-            <Image src={sorted[0].thumb} className="image-class" />
-            <div className={styles.largeNewsTitle}>
-              <div className="">
-                <NewsTitle
-                  headline={sorted[0].sort + " " + sorted[0].headline}
-                  subheadline={sorted[0].subheadline}
-                  labelClassName={
-                    !sorted[0].subheadline
-                      ? styles.yellow + " " + styles.bold
-                      : styles.labelClass
-                  }
-                  subLabelclass={styles.yellow + " " + styles.bold}
-                />
+            <div
+              onClick={() =>
+                router.push({
+                  pathname: `/news/${sorted[0].id}`,
+                  query: { id: sorted[0].id, type: "selected" },
+                })
+              }
+              className=""
+            >
+              <Image src={sorted[0].thumb} className="image-class" />
+              <div className={styles.largeNewsTitle}>
+                <div className="">
+                  <NewsTitle
+                    headline={sorted[0].sort + " " + sorted[0].headline}
+                    subheadline={sorted[0].subheadline}
+                    labelClassName={
+                      !sorted[0].subheadline
+                        ? styles.yellow + " " + styles.bold
+                        : styles.labelClass
+                    }
+                    subLabelclass={styles.yellow + " " + styles.bold}
+                  />
+                </div>
               </div>
-
-              {/* <Label value={sorted[0].headline} className="" /> */}
             </div>
+
             <div className={styles.centerCards}>
               {sorted.slice(1, 3).map((n: any, key: number) => (
-                <CenterNewsCard news={n} key={key} />
+                <CenterNewsCard
+                  onClick={() =>
+                    router.push({
+                      pathname: `/news/${n.id}`,
+                      query: { id: n.id, type: "selected" },
+                    })
+                  }
+                  news={n}
+                  key={key}
+                />
               ))}
             </div>
           </div>
